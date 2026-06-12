@@ -14,6 +14,7 @@ import type { Patient } from "./Patients";
 import doctorFirmaUrl from "../../imports/image.png";
 import doctorSelloUrl from "../../imports/image-1.png";
 
+
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 const TIPOS_EXAMEN = ["Ingreso", "Periódico", "Reintegro", "Reubicación", "Retiro", "Otros"];

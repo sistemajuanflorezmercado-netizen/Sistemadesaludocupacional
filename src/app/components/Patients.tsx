@@ -11,6 +11,20 @@ import { Search, Plus, Edit, Trash2, Eye, PenLine, X, RotateCcw, ClipboardList }
 import { toast } from "sonner";
 import { colombiaDepartamentos, epsColombia, afpColombia, tiposSangre } from "./colombiaData";
 import { HistoriaClinica, type HistoriaForm } from "./HistoriaClinica";
+import { supabase } from "../lib/supabase";
+
+const guardarPaciente = async (paciente) => {
+  const { data, error } = await supabase
+    .from("pacientes")
+    .insert([paciente]);
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  console.log("Paciente guardado", data);
+};
 
 export interface WorkData {
   company: string;
